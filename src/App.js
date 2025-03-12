@@ -12,6 +12,14 @@ function Form() {
   );
 }
 
-function PackingList() {}
+function PackingList() {
+  return <div className="List">list</div>;
+}
 
-function Stats() {}
+function Stats() {
+  return (
+    <footer>
+      🧳 You have X items on your list, and you already packed X(X%)
+    </footer>
+  );
+}
