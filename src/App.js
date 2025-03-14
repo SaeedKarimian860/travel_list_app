@@ -28,16 +28,25 @@ function Form() {
 
 function PackingList() {
   return (
-    <ul className="List">
-      {initialItems.map((item) => (
-        <Item item={item} />
-      ))}
-    </ul>
+    <div className="list">
+      <ul>
+        {initialItems.map((item) => (
+          <Item item={item} />
+        ))}
+      </ul>
+    </div>
   );
 }
 
 function Item({ item }) {
-  return <li>{item.description}</li>;
+  return (
+    <li>
+      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+        {item.quantity} {item.description}
+      </span>
+      <button>❌</button>
+    </li>
+  );
 }
 
 function Stats() {
