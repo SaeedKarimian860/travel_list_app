@@ -27,17 +27,23 @@ function Form() {
 }
 
 function PackingList() {
-  return <ul className="List">
-    {initialItems.map(item=><Item item={item} />)}
-  </ul>;
+  return (
+    <ul className="List">
+      {initialItems.map((item) => (
+        <Item item={item} />
+      ))}
+    </ul>
+  );
+}
+
+function Item({ item }) {
+  return <li>{item.description}</li>;
 }
 
 function Stats() {
   return (
     <footer className="stats">
-      <em>
-      🧳 You have X items on your list, and you already packed X(X%)
-      </em>
+      <em>🧳 You have X items on your list, and you already packed X(X%)</em>
     </footer>
   );
 }
