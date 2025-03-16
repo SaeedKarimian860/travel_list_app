@@ -26,6 +26,10 @@ function Form() {
   const [quantity, setQuantity] = useState(1);
   const [items, setItems] = useState([]);
 
+  function handleAddItems(item) {
+
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -33,6 +37,8 @@ function Form() {
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
     console.log(newItem);
+
+    handleAddItems(newItem);
 
     setDescription("");
     setQuantity(1);
