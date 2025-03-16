@@ -27,7 +27,7 @@ function Form() {
   const [items, setItems] = useState([]);
 
   function handleAddItems(item) {
-
+    setItems((items) => [...items, item]);
   }
 
   function handleSubmit(e) {
