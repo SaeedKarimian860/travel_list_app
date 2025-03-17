@@ -26,7 +26,7 @@ export default function App() {
       <PackingList
         items={items}
         onDeleteItem={handleDeleteItem}
-        onToggleItems={handleToggleItem}
+        onToggleItem={handleToggleItem}
       />
       <Stats />
     </div>
@@ -37,7 +37,7 @@ function Logo() {
   return <h1>🏝️ Far Away 🧳</h1>;
 }
 
-function Form(onAddItems) {
+function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
