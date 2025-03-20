@@ -19,6 +19,10 @@ export default function App() {
     );
   }
 
+  function handleClearList() {
+    setItems([]);
+  }
+
   return (
     <div className="app">
       <Logo />
@@ -114,6 +118,7 @@ function PackingList({ items, onDeleteItem, onToggleItem }) {
           <option value="description">Sort by descripton</option>
           <option value="packed">Sort by packed status</option>
         </select>
+        <button>Clear List</button>
       </div>
     </div>
   );
